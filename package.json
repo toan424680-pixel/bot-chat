@@ -1,0 +1,24 @@
+{
+  "name": "bot-chat",
+  "version": "1.0.0",
+  "description": "A simple chatbot application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "chatbot",
+    "nodejs",
+    "chat"
+  ],
+  "author": "toan424680-pixel",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
