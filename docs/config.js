@@ -5,7 +5,7 @@
 const CONFIG = {
   // Google Gemini API
   GEMINI_API_KEY: 'AQ.Ab8RN6JEBI6mi5Olc3yN4wfd-cwMcw12w1AlfGMkuWaRPZCj1Q', // Bạn cần thay bằng API key thực tế
-  GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent',
+  GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent',
   
   // OpenWeatherMap API
   WEATHER_API_KEY: 'fef009996fb6aa61c9ef757731280231', // Bạn cần thay bằng API key thực tế
