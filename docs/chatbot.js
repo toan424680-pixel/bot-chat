@@ -5,7 +5,7 @@
 let messageCount = 0;
 let currentChatRoom = 'default';
 let isVoiceEnabled = false;
-let isAIEnabled = false;
+let isAIEnabled = CONFIG.ENABLE_AI;
 
 const responses = {
   // Greetings
