@@ -5,7 +5,7 @@
 let messageCount = 0;
 let currentChatRoom = 'default';
 let isVoiceEnabled = false;
-let isAIEnabled = CONFIG.ENABLE_AI;
+let isAIEnabled = CONFIG.ENABLE_AI; // Bật/tắt AI theo cấu hình trong config.js
 
 const responses = {
   // Greetings
