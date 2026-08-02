@@ -4,11 +4,11 @@
 
 const CONFIG = {
   // Google Gemini API
-  GEMINI_API_KEY: 'AIzaSyBXJ_-rK_q_r_q_r_q_r_q_r_q_r_q_r_q', // Bạn cần thay bằng API key thực tế
+  GEMINI_API_KEY: 'AQ.Ab8RN6JEBI6mi5Olc3yN4wfd-cwMcw12w1AlfGMkuWaRPZCj1Q', // Bạn cần thay bằng API key thực tế
   GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent',
   
   // OpenWeatherMap API
-  WEATHER_API_KEY: '2e0b8a2b2d5e0f0a0b2d5e0f0a0b2d5e', // Bạn cần thay bằng API key thực tế
+  WEATHER_API_KEY: 'fef009996fb6aa61c9ef757731280231', // Bạn cần thay bằng API key thực tế
   WEATHER_API_URL: 'https://api.openweathermap.org/data/2.5/weather',
   
   // CoinGecko API (Free - No key needed)
