@@ -11,17 +11,24 @@ class API {
       }
 
       const response = await fetch(
-        `${CONFIG.GEMINI_API_URL}?key=${CONFIG.GEMINI_API_KEY}`,
+        CONFIG.GEMINI_API_URL,
         {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'x-goog-api-key': CONFIG.GEMINI_API_KEY
+          },
           body: JSON.stringify({
             contents: [{ parts: [{ text: message }] }]
           })
         }
       );
 
-      if (!response.ok) throw new Error('API Error');
+      if (!response.ok) {
+        const errBody = await response.text();
+        console.error('Gemini API responded with error:', response.status, errBody);
+        throw new Error(`API Error ${response.status}: ${errBody}`);
+      }
 
       const data = await response.json();
       return data.candidates?.[0]?.content?.parts?.[0]?.text || 'Xin lỗi, tôi không thể trả lời.';
