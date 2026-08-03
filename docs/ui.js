@@ -234,7 +234,7 @@ function playQuiz() {
   
   html += `</div></div>`;
   
-  addMessage(html, 'bot');
+  addMessage(html, 'bot', true);
 }
 
 function checkQuizAnswer(selected, correct) {
