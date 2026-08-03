@@ -128,7 +128,7 @@ function sendMessage() {
 }
 
 // Add message to chat
-function addMessage(text, sender) {
+function addMessage(text, sender, isHTML = false) {
   const chatBox = document.getElementById('chatBox');
   
   const messageDiv = document.createElement('div');
@@ -136,7 +136,13 @@ function addMessage(text, sender) {
   
   const contentDiv = document.createElement('div');
   contentDiv.className = 'message-content';
-  contentDiv.textContent = text;
+  if (isHTML) {
+    // Chỉ dùng cho nội dung HTML do chính app tạo ra (vd: quiz), KHÔNG dùng cho
+    // tin nhắn user/AI để tránh rủi ro XSS.
+    contentDiv.innerHTML = text;
+  } else {
+    contentDiv.textContent = text;
+  }
   
   messageDiv.appendChild(contentDiv);
   
